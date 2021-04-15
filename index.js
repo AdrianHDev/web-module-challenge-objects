@@ -116,8 +116,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(reviewArray, reviewIndex) {
-  const review = reviewArray[reviewIndex];
+function getReviewByIndex(reviewsArray, reviewIndex) {
+  const review = reviewsArray[reviewIndex];
   return `${review.name} gave the restaurant a ${review.rating} star review, and their feedback was: ${review.feedback}`
 }
 
@@ -136,8 +136,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(reviewsArray) {
+  return getReviewByIndex(reviewsArray,reviewsArray.length - 1)
 } 
 
 
