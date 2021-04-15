@@ -210,10 +210,20 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometerMiles) {
+  return {
+    name:'car',
+    odometer: odometerMiles,
+    drive(milesDistance) {
+      this.odometer += milesDistance;
+      return this.odometer;
+    }
+  }
 }
+
+let car22 = carMaker(52);
+console.log(car22);
+console.log(car22.drive(5));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
