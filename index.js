@@ -158,11 +158,16 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+ function getReviewByRating(reviewsArray, rating) {
+   let ratedArray = [];
+   for (let review of reviewsArray) {
+     if (review.rating === rating) {
+       ratedArray.push(review)
+     }
+   }
+   return ratedArray
+}
 
-  
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
@@ -176,8 +181,14 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(reviewsArray) {
+  let curatedArray = [];
+  for (let review of reviewsArray) {
+    if (review.feedback.length > 15) {
+      ratedArray.push(review)
+    }
+  }
+  return curatedArray
   }
   
 
